@@ -1,0 +1,66 @@
+# need to install node_modules locally
+version: '3.7'
+services:
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    restart: unless-stopped
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: genericQueueExpress
+      ME_CONFIG_BASICAUTH_PASSWORD: eZRr88FTDccPyAFd
+      ME_CONFIG_MONGODB_PORT: 27017
+    ports:
+     - 8181:8181
+    env_file: ./backend/.env
+    links:
+      - mongo
+    networks:
+      - mongo-compose-network
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: generic-queue
+    ports:
+     - "27017:27017"
+    volumes:
+      - ./backend/data/db:/data/db
+    env_file: ./backend/.env
+    networks:
+      - mongo-compose-network
+
+  backend:
+    container_name: backend
+    build: ./backend
+    restart: unless-stopped
+    ports:
+     - "3030:3030"
+    volumes:
+      - ./backend:/usr/src/app
+      - ./backend/data:/usr/src/app/data
+      - ./backend/node_modules:/usr/src/app/node_modules
+    depends_on:
+      - "mongo"
+    command: npm start
+    networks:
+      - mongo-compose-network
+
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    restart: unless-stopped
+    ports:
+     - "3000:3000"
+    volumes:
+      - ./frontend:/usr/src/app
+      - ./frontend/node_modules:/usr/src/app/node_modules
+    depends_on:
+      - "backend"
+    stdin_open: true
+    command: npm start
+
+networks: 
+    mongo-compose-network:
+      driver: bridge

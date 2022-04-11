@@ -1,0 +1,6 @@
+module.exports = {
+    ORDERED: 'ORDERED',
+    PROCESSING: 'PROCESSING',
+    FINISHED: 'FINISHED',
+    CANCELED: 'CANCELED',
+}

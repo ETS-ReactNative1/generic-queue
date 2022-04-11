@@ -1,0 +1,87 @@
+.modal {
+  position: absolute;
+  background: white;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  position: fixed;
+  top: 10vh;
+  left: 5%;
+  z-index: 100;
+  border-radius: 15px;
+}
+
+.modal-header {
+  text-align: center;
+  padding: 1rem;
+  background: tomato;
+  color: white;
+}
+
+.modal-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.modal-content {
+  text-align: center;
+  padding: 1rem;
+  white-space: break-spaces;
+}
+
+.modal-error {
+  text-align: center;
+  padding: 1rem;
+  white-space: break-spaces;
+  color: red;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 45em;
+    left: calc((100% - 45rem) / 2);
+  }
+}
+
+.btn-modal {  
+  width: 8em;
+  height: 3em;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.cancel {
+  background-color: transparent;
+  border: 2px solid red;
+  color: red;
+}
+
+.confirm {
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.break-apart {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.6em;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+.span-modal {
+  text-align: center;
+  width: 300px;
+  overflow-wrap: break-word;
+}

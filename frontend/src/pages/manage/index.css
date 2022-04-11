@@ -1,0 +1,251 @@
+.container-manage {
+    text-align: -webkit-center;
+    padding-left: 80px;
+    padding-top: 2em;
+    height: 88.4vh;
+    overflow: overlay;
+}
+
+.custom-file-upload {
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    padding: 6px;
+    cursor: pointer;
+    background: linear-gradient(270deg, #0066cc, #00b4cc);
+    margin-bottom: 25px;
+}
+
+.img-wrap{
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    justify-content: space-around;
+}
+
+.img-upload:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0066cc;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #fff;
+    background-image: url("../../assets/upload.svg");
+}
+
+.img-upload-hover:hover:before{
+   opacity: 1;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.img-preview {
+    height: 128px;
+    border-radius: 100%;
+}
+
+img {
+    width: auto;
+    height: 100%;
+}
+
+.align-photo {
+    display: inline-grid;
+}
+
+.input-manage {
+    align-self: center;
+    width: 70%;
+}
+
+.circular-button-add {
+    background-color: #0066cc;
+    cursor: pointer;
+    align-self: center;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 10px;
+    font-size: 16px;
+    background-image: url("../../assets/plus.svg");
+}
+
+.circular-button-del {
+    background-color: red;
+    cursor: pointer;
+    align-self: center;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    padding: 15px;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 10px;
+    background-image: url("../../assets/minus.svg");
+}
+
+.option-div {
+    display: flex;
+    align-self: center;
+}
+
+.option-fields {
+    justify-items: center;
+    display: inline-grid;
+    margin-bottom: 10px;
+}
+
+.option-fields input {
+    width: 90%;
+}
+
+.loader {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(400%);
+    z-index: 99999;
+}
+
+.form-error {
+    color: #F42B4B;
+}
+
+.description-item {
+    color: #404040;
+}
+
+.table-striped {
+    border: none;
+    width: 95%;
+    margin: 5em 0em 2em 0em;
+}
+
+.row-item {
+    height: 8em;
+    vertical-align: top;
+}
+
+.row-item td {
+    padding: 10px;
+}
+
+.row-item:hover {
+    background-color: #C8C8C8;
+}
+
+.btn-table-item {
+    white-space: nowrap;
+    padding-top: 2.4em;
+}
+
+.btn-table-item:first-child {
+    margin-right: 8px;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-weight: bold;
+    align-self: center;
+    width: max-content;
+}
+
+.btn:focus {
+    outline: none !important;
+}
+
+.add-item-btn {
+    margin-top: 16px;
+    height: 40px;
+    width: 200px;
+    font-size: 15px;
+    background-color: #3399ff;
+}
+  
+.add-item-btn:hover {
+    background-color: #0066cc;
+}
+
+.del-item-btn {
+    height: 40px;
+    width: 68px;
+    font-size: 15px;
+    background-color: #ff3333;
+}
+
+.del-item-btn:hover {
+    background-color: #cc0000;
+}
+
+.edit-item-btn {
+    height: 40px;
+    width: 68px;
+    font-size: 15px;
+    background-color: #35b821;
+}
+
+.edit-item-btn:hover {
+    background-color: #2b961b;
+}
+
+.search-item {
+    margin-right: 12px;
+    width: 40%;
+}
+   
+.search-item input {
+    display: inline-flex;
+    width: -webkit-fill-available;
+}
+
+.item-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    cursor: pointer;
+}
+  
+.pagination a {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #0066cc;
+    color: #0066cc;
+}
+  
+.pagination__link {
+    font-weight: bold;
+}
+  
+.pagination__link--active a {
+    color: #fff;
+    background: #0066cc;
+}
+  
+.pagination__link--disabled a {
+    color: rgb(198, 197, 202);
+    border: 1px solid rgb(198, 197, 202);
+}  

@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "async": "^3.2.2",
+    "axios": "^0.21.4",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.23.1",
+    "fastify-auth": "^1.1.0",
+    "fastify-cors": "^3.0.3",
+    "fastify-plugin": "^1.6.1",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

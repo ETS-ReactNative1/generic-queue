@@ -1,0 +1,15 @@
+.pwd-container {
+  position: relative;
+}
+ 
+.pwd-container input {
+  display: inline-flex;
+  width: -webkit-fill-available;
+}
+
+.pwd-container img {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  right: 8px;
+}

@@ -1,0 +1,94 @@
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    height: 70%;
+    width: 45%;
+    margin-left: 26.5%;
+    border-radius: 10px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 70px);
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* Add some padding inside the card container */
+.login-container .container {
+  padding-left: 7%;
+  padding-right: 7%;
+  height: 100%;
+}
+
+.login-container .container label {
+  margin-bottom: 1%;
+}
+
+.login-container .container h1 {
+  font-size: 2.5rem;
+  align-self: center;
+}
+
+.login-container .container form {
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: center;
+}
+
+.login-btn {
+  margin-top: 16px;
+  align-self: center;
+  width: max-content;
+}
+
+.login-container button {
+  height: 40px;
+  width: 200px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #3399ff;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: none;
+}
+
+.login-container button:hover {
+  background-color: #0066cc;
+  cursor: pointer;
+}
+
+.login-container button:focus {
+  outline: none !important;
+}
+
+.form-error {
+  color: #F42B4B;
+  text-align: center;
+}

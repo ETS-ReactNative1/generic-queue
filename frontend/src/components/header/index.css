@@ -1,0 +1,23 @@
+.header {
+  background-color: black;
+  height: 50px;
+  width: 100%;
+}
+
+.banner {
+  color: azure;
+  align-items: center;
+  margin: 0 25px 0 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner h2 {
+  cursor: pointer;
+  display: contents;
+}
+
+.white-link {
+  cursor: pointer;
+  color: white;
+}
