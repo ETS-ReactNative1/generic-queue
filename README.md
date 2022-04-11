@@ -1,4 +1,5 @@
 This project is a template for generic queue based applications (like ifood but extendable to any market niche). A preview of the running application can be seen here: https://youtu.be/RyfnZqqZEYg
+
 To run the local application it is necessary to have installed:
 1. Docker/Docker-compose;
 2. an AVD emulator (I used the one provided by Android Studio);
